@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "@phaticusthiccy/open-apis": "^1.8.5",
-    "dotenv": "^16.0.1",
     "telegraf": "^4.8.6"
   }
 }
