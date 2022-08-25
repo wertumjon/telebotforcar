@@ -1,7 +1,6 @@
 const { Telegraf, Markup } = require('telegraf');
-require('dotnv').config()
 const instagram = require("@phaticusthiccy/open-apis");
-const TOKEN = process.env.TOKEN
+const TOKEN = '5011456652:AAHWYVXJJqWwEV4Za3p5-LyYvaoIhk5tkwU';
 
 
 const bot = new Telegraf(TOKEN);
