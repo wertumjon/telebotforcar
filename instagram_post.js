@@ -5,7 +5,7 @@ async function insta_post(url) {
     try {
         data = await export_data(url);
     } catch {
-        return //throw new Error("There is a problemm with the given link!");
+        return;//throw new Error("There is a problemm with the given link!");
     }
     var payload = new Object();
     var if_one_post = false
