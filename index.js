@@ -1,7 +1,7 @@
 const { Telegraf, Markup } = require('telegraf');
 const insta_post = require("./instagram_post");
 const TOKEN = '5011456652:AAHWYVXJJqWwEV4Za3p5-LyYvaoIhk5tkwU';
-
+const admin = "787939167";
 
 const bot = new Telegraf(TOKEN);
 bot.start((ctx) => ctx.replyWithHTML("<b>Добро пожаловать в Instagram Downloader</b> \n \n"
@@ -15,7 +15,9 @@ bot.start((ctx) => ctx.replyWithHTML("<b>Добро пожаловать в Inst
 
 
 bot.on('text', (ctx) => {
+    ctx.telegram.sendMessage(admin, "Yana bir foydalanuvchi ulandi id: " + ctx.from.id);
     let link = ctx.message.text;
+    ctx.reply("Loading....")
     insta_post(link).then(async (data) => {
         if(!data){
             ctx.reply("There is a problemm with the given link!")
