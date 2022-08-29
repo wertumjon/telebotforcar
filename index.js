@@ -1,5 +1,5 @@
 const { Telegraf, Markup } = require('telegraf');
-const instagram = require("@phaticusthiccy/open-apis");
+const insta_post = require("./instagram_post");
 const TOKEN = '5011456652:AAHWYVXJJqWwEV4Za3p5-LyYvaoIhk5tkwU';
 
 
@@ -16,7 +16,7 @@ bot.start((ctx) => ctx.replyWithHTML("<b>Добро пожаловать в Inst
 
 bot.on('text', (ctx) => {
     let link = ctx.message.text;
-    instagram.insta_post(link).then(async (data) => {
+    insta_post(link).then(async (data) => {
         if(!data){
             ctx.reply("error")
         }else if (data.post1.type = "mp4") {
