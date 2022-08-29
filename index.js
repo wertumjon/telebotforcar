@@ -18,7 +18,7 @@ bot.on('text', (ctx) => {
     let link = ctx.message.text;
     insta_post(link).then(async (data) => {
         if(!data){
-            ctx.reply("error")
+            ctx.reply("There is a problemm with the given link!")
         }else if (data.post1.type = "mp4") {
             ctx.replyWithVideo(data.post1.url)
         } else {
