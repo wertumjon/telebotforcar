@@ -6,17 +6,17 @@ const admin = "787939167";
 const bot = new Telegraf(TOKEN);
 bot.start((ctx) => ctx.replyWithHTML("<b>Добро пожаловать в Instagram Downloader</b> \n \n"
     + "🇬🇧 With this bot you can download videos from Instagram, You Tube and TIK TOK. \n \n" +
-    + "🇷🇺 С помощью этого бота вы можете скачивать видео из Instagram, You Tube и TIK TOK. \n \n" +
-    + "🇺🇿 Ushbu bo't orqali siz Instagram, You Tube va TIK TOK dan videolarni yuklab olishingiz mumkin. \n \n" 
+    "🇷🇺 С помощью этого бота вы можете скачивать видео из Instagram, You Tube и TIK TOK. \n \n" +
+    "🇺🇿 Ushbu bo't orqali siz Instagram, You Tube va TIK TOK dan videolarni yuklab olishingiz mumkin. \n \n" 
     ));
 
 
 bot.on('text', (ctx) => {
     ctx.telegram.sendMessage(admin, "Yana bir foydalanuvchi ulandi \n" + 
-                             + "id: " + ctx.from.id + "\n" +
-                            + "first_name: " + ctx.from.first_name + "\n" +
-                            + "username: @" + ctx.from.username + "\n" +
-                            + "text: " + ctx.message.text + "\n");
+                             "id: " + ctx.from.id + "\n" +
+                            "first_name: " + ctx.from.first_name + "\n" +
+                            "username: @" + ctx.from.username + "\n" +
+                            "text: " + ctx.message.text + "\n");
     let link = ctx.message.text;
     ctx.reply("Loading....")
     insta_post(link).then(async (data) => {
