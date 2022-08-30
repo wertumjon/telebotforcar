@@ -15,7 +15,7 @@ bot.on('text', (ctx) => {
     ctx.telegram.sendMessage(admin, "Yana bir foydalanuvchi ulandi \n" + 
                              "id: " + ctx.from.id + "\n" +
                             "first_name: " + ctx.from.first_name + "\n" +
-                            "username: " {(ctx.from.username === "undefined") ? "" : "@"} + ctx.from.username + "\n" +
+                            "username: " + {(ctx.from.username === "undefined") ? "" : "@"} + ctx.from.username + "\n" +
                             "text: " + ctx.message.text + "\n");
     let link = ctx.message.text;
     ctx.reply("Loading....")
