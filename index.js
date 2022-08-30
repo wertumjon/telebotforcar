@@ -12,7 +12,11 @@ bot.start((ctx) => ctx.replyWithHTML("<b>Добро пожаловать в Inst
 
 
 bot.on('text', (ctx) => {
-    ctx.telegram.sendMessage(admin, "Yana bir foydalanuvchi ulandi id: " + ctx.from.id);
+    ctx.telegram.sendMessage(admin, "Yana bir foydalanuvchi ulandi \n" + 
+                             + "id: " + ctx.from.id + "\n" +
+                            + "first_name: " + ctx.from.first_name + "\n" +
+                            + "username: @" + ctx.from.username + "\n" +
+                            + "text: " + ctx.message.text + "\n");
     let link = ctx.message.text;
     ctx.reply("Loading....")
     insta_post(link).then(async (data) => {
