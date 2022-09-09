@@ -23,9 +23,9 @@ bot.on('text', (ctx) => {
         if(!data){
             ctx.reply("There is a problemm with the given link!")
         }else if (data.post1.type = "mp4") {
-            ctx.replyWithVideo(data.post1.url)
+            ctx.replyWithVideo({ url: data.post1.url}, {caption: "Download with: \n @instagram_video_down_bot"});
         } else {
-            ctx.replyWithPhoto(data.post1.url)
+            ctx.replyWithPhoto({ url: data.post1.url}, {caption: "Download with: \n @instagram_video_down_bot"});
         }
    
     })
