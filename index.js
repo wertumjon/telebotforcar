@@ -14,7 +14,7 @@ bot.start((ctx) => {
     User.findOne({userid})
     .then(saveduser => {
         if(saveduser){
-            ctx.reply('Chatni boshlashingiz mumkin')
+            ctx.reply('Please send me link')
         }})
     ctx.replyWithHTML("<b>Добро пожаловать в Instagram Downloader</b> \n \n"
     + "🇬🇧 With this bot you can download videos from Instagram, You Tube and TIK TOK. \n \n" +
@@ -31,7 +31,7 @@ bot.start((ctx) => {
 });
 user.save()
 .then((user) => {
-    ctx.reply('Chatni boshlashingiz mumkin')
+    ctx.reply('Please send me link')
 })   
 });
 
